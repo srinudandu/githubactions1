@@ -23,3 +23,10 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
     publishLocation: 'Container'
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'Web-SS'
+    appType: 'webApp'
+    WebAppName: 'IPM-TEST'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)'
