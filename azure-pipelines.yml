@@ -3,7 +3,7 @@ trigger:
 - master
 
 pool:
-   name: TFS3
+   name: web
 
 variables:
   solution: '**/*.sln'
